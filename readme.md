@@ -25,7 +25,7 @@
 
 [Driver Highway](https://www.freeonlinegames.com/game/driver-highway) est exactement le jeu à réaliser. Des règles seront supprimées/ajoutées ainsi que des éléments de gameplay. Le déplacement de notre jeu est différent de celui-ci puisque que dans notre jeu la voiture n’est pas déplacée d'une bande d'autoroute à une autre, mais se déplace librement.
 
-![Driver Highway](/src/resources/study/DriverHighway.gif)
+<img src="/src/resources/study/DriverHighway.gif" alt="Driver Highway" height="400"/>
 
 ## Idées supplémentaires
 
