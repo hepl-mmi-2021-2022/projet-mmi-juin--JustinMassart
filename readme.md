@@ -2,12 +2,16 @@
 
 ## Description du but du jeu
 
->Crashing Highway est un jeu de 2D-scrolling où le but est de parcourir la plus grande distance possible sur une autoroute à 4 bandes. Notre voiture est la plus rapide donc il faudra éviter tous les autres usagers de la route en les dépassant, sans les toucher ni sans toucher les bords de l'autoroute ou sinon c'est le crash. Game Over !
+> Crashing Highway est un jeu de 2D-scrolling où le but est de parcourir la plus grande distance possible sur une autoroute à 4 bandes. Notre voiture est la plus rapide donc il faudra éviter tous les autres usagers de la route en les dépassant, sans les toucher ni sans toucher les bords de l'autoroute ou sinon c'est le crash. Game Over !
+
+### Lien Github Pages
+
+#### https://hepl-mmi-2021-2022.github.io/projet-mmi-juin-justin-massart/
 
 ## Description du jeu
 
 - Le jeu est du 2D-scrolling.
-- La perspective est du Top View - Side View ---> Vue à +/- 45. 
+- La perspective est du Top View - Side View ---> Vue à +/- 45.
 - Des voitures roulent moins vite que nous.
 
 ## Règles de base
@@ -23,7 +27,9 @@
 
 ### [Driver Highway](https://www.freeonlinegames.com/game/driver-highway)
 
-[Driver Highway](https://www.freeonlinegames.com/game/driver-highway) est +/- le jeu à réaliser. Des règles seront supprimées/ajoutées ainsi que des éléments de gameplay. Le déplacement de notre jeu est différent de celui-ci puisque que dans notre jeu la voiture n’est pas déplacée d'une bande d'autoroute à une autre, mais se déplace librement.
+[Driver Highway](https://www.freeonlinegames.com/game/driver-highway) est +/- le jeu à réaliser. Des règles seront supprimées/ajoutées ainsi que des éléments de gameplay.
+Le déplacement de notre jeu est différent de celui-ci puisque que dans notre jeu la voiture n’est pas déplacée d'une bande d'autoroute à une autre, mais se déplace
+librement.
 
 <img src="/src/resources/study/DriverHighway.gif" alt="Driver Highway" height="400"/>
 
