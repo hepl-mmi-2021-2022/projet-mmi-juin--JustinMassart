@@ -32,6 +32,7 @@ Le déplacement de notre jeu est différent de celui-ci puisque que dans notre j
 librement.
 
 <img src="/src/resources/study/DriverHighway.gif" alt="Driver Highway" height="400"/>
+<img src="/src/resources/study/PixelRacer.png" alt="Driver Highway" width="400"/>
 
 ## Idées supplémentaires
 
