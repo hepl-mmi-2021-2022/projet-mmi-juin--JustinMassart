@@ -30,7 +30,9 @@
 ## Idées supplémentaires
 
 - Gestion du carburant de la voiture (jerrican à ramasser sur la route).
-- Éléments du décor à esquive (ni de poule, tronc d’arbre, ... ).
 - Gestion du score (distance (+ voitures esquivées) ?) (plus on roule vite plus le score augmente avec un multiplicateur/temps) ?
-- Du son sera ajouté en dernier au jeu.
 
+## Peut être ajouter
+
+- Ajouter du son.
+- Éléments du décor à esquive (ni de poule, tronc d’arbre, ... ).
