@@ -35,5 +35,10 @@ export class BackgroundCanvas extends Canvas {
         this.ctx.rect(0, this.canvas.height / 4, this.canvas.width, this.canvas.height);
         this.ctx.fill();
         this.ctx.closePath();
+        this.ctx.beginPath();
+        this.ctx.fillStyle = settings.road.color;
+        this.ctx.rect(0, (this.canvas.height / 4 + settings.road.freeSpace), this.canvas.width, (this.canvas.height - this.canvas.height / 4 - settings.road.freeSpace * 2));
+        this.ctx.fill();
+        this.ctx.closePath();
     }
 }
