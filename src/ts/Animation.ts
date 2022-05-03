@@ -21,10 +21,13 @@ export class Animation {
         window.addEventListener('keydown', (e) => {
             if (e.key === 's') {
                 window.cancelAnimationFrame(this.requestId)
+                this.requestId = null;
             } else if (e.key === 'g') {
-                this.requestId = window.requestAnimationFrame(() => {
-                    this.animate();
-                })
+                if (!this.requestId) {
+                    this.requestId = window.requestAnimationFrame(() => {
+                        this.animate();
+                    })
+                }
             }
         })
     }
