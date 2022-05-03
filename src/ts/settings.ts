@@ -1,4 +1,5 @@
 import {Hsl} from "./Helpers/Hsl";
+import {Canvas} from "./Drawable/Canvas";
 
 export const settings = {
     sky: {
@@ -10,8 +11,23 @@ export const settings = {
     road: {
         color: 'hsl(0,0%,20%)',
         freeSpace: 100,
+        width: 600,
     },
     stripe: {
-        stripeColor: 'hsl(0, 0%, 100%)',
+        color: 'hsl(0, 0%, 90%)',
+        width: {min: 70, max: 75},
+        height: 15,
+        verticalStart: {
+            firstLane: 200,
+            secondLane: 400
+        },
+        canvasWidthFactor: 2,
+        canvasHeightFactor: 6,
+        gapBetweenLanes: 0.7,
     },
+    playerCar: {
+        ratio: 2.74,
+        carSizeFactor: 5,
+        startX: 100,
+    }
 }

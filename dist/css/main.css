@@ -5,10 +5,16 @@
 }
 
 #backgroundCanvas {
-  z-index: -2;
+  z-index: -1;
   position: absolute;
 }
 
-#road {
+#stripes {
+  z-index: 0;
+  position: absolute;
+}
+
+#playerCar {
   z-index: 1;
+  position: absolute;
 }

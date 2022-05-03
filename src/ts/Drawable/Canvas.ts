@@ -9,6 +9,16 @@ export abstract class Canvas implements IDrawable {
         this.ctx = ctx;
     }
 
+    resize() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+        window.addEventListener('resize', () => {
+            this.canvas.width = window.innerWidth;
+            this.canvas.height = window.innerHeight;
+            this.draw();
+        })
+    }
+
     draw() {
     }
 }

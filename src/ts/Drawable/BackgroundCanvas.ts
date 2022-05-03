@@ -10,17 +10,6 @@ export class BackgroundCanvas extends Canvas {
         this.draw();
     }
 
-    resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
-        window.addEventListener('resize', () => {
-            this.canvas.width = window.innerWidth;
-            this.canvas.height = window.innerHeight;
-            this.draw();
-        })
-
-    }
-
     override draw() {
         this.gradient = this.ctx.createLinearGradient(this.canvas.width / 2, 0, this.canvas.width / 2, this.canvas.height);
         for (let i = 0; i < settings.sky.gradient.length; i++) {
@@ -32,12 +21,12 @@ export class BackgroundCanvas extends Canvas {
         this.ctx.closePath();
         this.ctx.beginPath();
         this.ctx.fillStyle = settings.grass.color;
-        this.ctx.rect(0, this.canvas.height / 4, this.canvas.width, this.canvas.height);
+        this.ctx.rect(0, this.canvas.height / 6, this.canvas.width, this.canvas.height);
         this.ctx.fill();
         this.ctx.closePath();
         this.ctx.beginPath();
         this.ctx.fillStyle = settings.road.color;
-        this.ctx.rect(0, (this.canvas.height / 4 + settings.road.freeSpace), this.canvas.width, (this.canvas.height - this.canvas.height / 4 - settings.road.freeSpace * 2));
+        this.ctx.rect(0, (this.canvas.height / 6 + settings.road.freeSpace), this.canvas.width, settings.road.width);
         this.ctx.fill();
         this.ctx.closePath();
     }
