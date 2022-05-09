@@ -1,4 +1,5 @@
 import {IDrawable} from "../Interface/IDrawable";
+import {settings} from "../settings";
 
 export abstract class Canvas implements IDrawable {
     protected readonly canvas: HTMLCanvasElement;
@@ -10,11 +11,11 @@ export abstract class Canvas implements IDrawable {
     }
 
     resize() {
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvas.width = settings.canvas.width;
+        this.canvas.height = settings.canvas.height;
         window.addEventListener('resize', () => {
-            this.canvas.width = window.innerWidth;
-            this.canvas.height = window.innerHeight;
+            this.canvas.width = settings.canvas.width;
+            this.canvas.height = settings.canvas.height;
             this.draw();
         })
     }

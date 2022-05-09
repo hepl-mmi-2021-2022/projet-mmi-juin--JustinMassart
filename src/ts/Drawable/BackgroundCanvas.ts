@@ -3,9 +3,11 @@ import {settings} from "../settings";
 
 export class BackgroundCanvas extends Canvas {
     protected gradient: CanvasGradient;
+    protected readonly freeRoadSpace: number;
 
     constructor(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
         super(canvas, ctx);
+        this.freeRoadSpace = settings.road.freeSpace;
         this.resize();
         this.draw();
     }
@@ -26,7 +28,7 @@ export class BackgroundCanvas extends Canvas {
         this.ctx.closePath();
         this.ctx.beginPath();
         this.ctx.fillStyle = settings.road.color;
-        this.ctx.rect(0, (this.canvas.height / 6 + settings.road.freeSpace), this.canvas.width, settings.road.width);
+        this.ctx.rect(0, (this.canvas.height / 6 + this.freeRoadSpace), this.canvas.width, (this.canvas.height - (this.canvas.height / 6 + this.freeRoadSpace)) - this.freeRoadSpace);
         this.ctx.fill();
         this.ctx.closePath();
     }

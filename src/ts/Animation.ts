@@ -1,6 +1,6 @@
 import {Stripe} from "./Drawable/Stripe";
 import {settings} from "./settings";
-
+import {PlayerCar} from "./Drawable/PlayerCar";
 
 export class Animation {
     protected readonly Stripe: Stripe;
@@ -11,24 +11,19 @@ export class Animation {
     protected requestId: number;
     protected frameCounter: number;
     protected frameInterval: number;
+    protected PlayerCar: PlayerCar;
+    protected readonly PlayerCarCanvasElement: HTMLCanvasElement = document.getElementById("playerCar") as HTMLCanvasElement;
+    protected readonly PlayerCarCanvasCtx: CanvasRenderingContext2D = this.PlayerCarCanvasElement.getContext("2d", {alpha: true}) as CanvasRenderingContext2D;
+    private game: Boolean;
 
     constructor() {
         this.stripes = [];
-        this.maxStripes = 12;
-        this.frameCounter = 0;
-        this.frameInterval = 5;
-        this.animate();
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 's') {
-                window.cancelAnimationFrame(this.requestId)
-                this.requestId = null;
-            } else if (e.key === 'g') {
-                if (!this.requestId) {
-                    this.requestId = window.requestAnimationFrame(() => {
-                        this.animate();
-                    })
-                }
-            }
+        this.maxStripes = settings.animation.maxStripes;
+        this.frameCounter = settings.animation.frameCounter;
+        this.frameInterval = settings.animation.frameInterval;
+        this.PlayerCar = new PlayerCar(this.PlayerCarCanvasElement, this.PlayerCarCanvasCtx);
+        this.PlayerCar.sprite.addEventListener('load', (e) => {
+            this.animate();
         })
     }
 
@@ -50,6 +45,8 @@ export class Animation {
         this.stripes.forEach((stripe: { update: () => void; }) => {
             stripe.update();
         })
+        this.PlayerCar.update();
     }
+
 
 }
